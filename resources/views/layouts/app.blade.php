@@ -6,16 +6,43 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <!-- Bootstrap CSS from CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            .min-h-screen {
+                min-height: 100vh; 
+            }
+
+            .flex-container {
+                display: flex;
+                flex-direction: column; 
+                height: 100%;  
+            }
+
+            main {
+                display: flex;
+                align-items: center;  
+                justify-content: center;
+                flex-grow: 1; 
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <!-- Use flexbox to arrange header and main -->
+        <div class="flex-container">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
