@@ -13,8 +13,6 @@
             src: url('{{ asset('InterVariable.ttf') }}') format('truetype');
         }
 
-        
-
     </style> 
     <!-- Primary Navigation Menu -->
     <div class="max-w mx-auto px-4 sm:px-6 lg">
