@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('habits', function (Blueprint $table) {
             $table->enum('types', ['walk', 'bike', 'vehicle'])->primary();
-            $tables->float('habit-distance');
-            $tables->float('carbon-footprint');
+            $table->float('habit-distance');
+            $table->float('carbon-footprint');
             $table->timestamps();
         });
     }

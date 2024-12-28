@@ -5,6 +5,7 @@
             font-family: 'Inter';
             src: url('{{ asset('InterVariable.ttf') }}') format('truetype');
         }
+        
         body {
             background-color: #EDEBDF;
         }
@@ -92,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-center flex-col square-card me-3 ms-3">
+            <div class="flex items-center justify-center flex-col square-card ms-3">
                 <div class="color-background flex items-center justify-center flex-col">
                     <div><i class="bi bi-bicycle logo-color"></i></div>
                     <div class="type-color -mt-2">Bicycle</div>
