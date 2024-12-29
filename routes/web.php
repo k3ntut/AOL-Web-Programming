@@ -20,6 +20,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('/tnr', TipsAndResourcesController::class);
     Route::get('/log', [LogController::class, 'index'])->name('log.index');
+    Route::get('/AboutUs', function () {
+        return view('AboutUs');
+    })->name('aboutus');
+    
 });
 
 require __DIR__.'/auth.php';

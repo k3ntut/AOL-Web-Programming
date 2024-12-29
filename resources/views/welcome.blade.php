@@ -46,10 +46,12 @@
         h1{
             font-family: Inter;
             color: #57544D;
+            font-weight: bold;
         }
 
         h5{
             font-family: Inter;
+            color: #7C7A72;
         }
 
     </style>
@@ -66,13 +68,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Dashboard<span class="sr-only"></span></a>
+                    <a class="nav-link" href="{{ route('dashboard') }}">Home<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tips & Resource</a>
+                    <a class="nav-link" href="{{route('tnr.index')}}">Tips & Resource</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="{{ route('aboutus') }}">About</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -84,7 +86,7 @@
     <div class="center-content">
         <h1 class="font-weight-bold" style="font-size: 5rem">Track Your Impact,</h1>
         <h1 class="font-weight-bold" style="font-size: 5rem;">Shape a Greener Tomorrow!</h1>
-        <h5 class="font-weight-light ps-2 pb-2" style="font-size: 1.2rem;">Log your habits, see your progress, and make sustainable living second nature.</h5>
+        <h5 class=" ps-2 pb-4 pt-2" style="font-size: 1.2rem;">Log your habits, see your progress, and make sustainable living second nature.</h5>
         <a href="{{ route('register') }}" class="btn btn-success">Get Started</a>
     </div>
 

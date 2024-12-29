@@ -33,7 +33,7 @@
                     <x-nav-link :href="route('tnr.index')" :active="request()->routeIs('tnr.index')">
                         {{ __('Tips And Resources') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('tnr.index')" :active="request()->routeIs('tnr.index')">
+                    <x-nav-link :href="route('aboutus')">
                         {{ __('About') }}
                     </x-nav-link>
                 </div>
