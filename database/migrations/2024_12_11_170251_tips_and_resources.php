@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('tipsandresources', function (Blueprint $table) {
             $table->id();
-            $table->string('category');
+            $table->string('title');
             $table->longText('content');
+            $table->binary('image');
             $table->timestamps();
         });
     }

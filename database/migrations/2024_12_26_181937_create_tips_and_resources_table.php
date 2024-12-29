@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('tips_and_resources', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->longText('content');
+            $table->longText('image');
             $table->timestamps();
         });
     }
