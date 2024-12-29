@@ -11,7 +11,6 @@
         }
         .jumbotron {
             height: 500px;
-            margin-top: -30px;
             background-image: url('./imgs/image_11.png');
             background-size: cover;
             color: #edebdf;

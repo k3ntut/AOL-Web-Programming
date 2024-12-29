@@ -36,9 +36,10 @@ class TipsAndResourcesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(TipsAndResources $tipsAndResources)
+    public function show($tipsAndResources)
     {
-        //
+        $tip = TipsAndResources::findOrFail($tipsAndResources);
+        return view('tnr.index_detail', ['tip' => $tip]);
     }
 
     /**

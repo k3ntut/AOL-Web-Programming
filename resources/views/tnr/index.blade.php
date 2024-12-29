@@ -33,25 +33,90 @@
         }
     </style>
     <x-slot name="header">
-        <h2 class="font-semibold text-custom-color-1 leading-tight text-4xl">
-            {{ __('Tips and Resources') }}
-        </h2>
+        <div class="flex justify-between align-center pb-2 pt-2">
+        <div>
+            <h2 class="font-semibold text-custom-color-1 leading-tight text-4xl">
+                {{ __('Tips and Resources') }}
+            </h2>
+        </div>
+        <div class="custom-font">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add TnR
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <form>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title custom-font font-semibold" id="exampleModalLabel">Add Tips and Resources Content</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form>
+                            <div class="form-group mb-2">
+                                <label for="formGroupExampleInput">Content Title</label>
+                                <input type="text" class="form-control rounded-md" id="formGroupExampleInput" placeholder="Enter Title">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="formGroupExampleInput2">Content</label>
+                                <textarea class="form-control rounded-md" id="content" rows="8" placeholder="Enter Content"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        </div>
     </x-slot>
+
     <div>
     @foreach ($tipsandresources as $tip)
     <div class="w-full flex items-center justify-center custom-font mb-4">
-        <div class="card rounded-xl border-4 border-custom-color w-7/12 h-64">
-        <img src="{{ $tip->image }}" alt="{{ $tip->title }}" class="w-52 h-auto object-cover rounded-l-lg"/>
-        <div class="m-4">
-                <h5 class="text-2xl font-bold mb-2">{{$tip->title}}</h5>
-                <p class="custom-color-desc h-28 overflow-auto">{{$tip->content}}</p>
-                <div class="flex items-end flex-col">
-                    <a href="#" class="btn btn-success items-end pt-2">Go somewhere</a>
-                </div>           
+        <!-- Fixed card height & width -->
+        <div 
+            class="card flex rounded-xl border-4 border-custom-color
+                   h-64 w-8/12 overflow-hidden"
+        >
+            <!-- Image occupies a fixed width, full height -->
+            <img
+                src="{{ $tip->image }}"
+                alt="{{ $tip->title }}"
+                class="w-52 h-full object-cover rounded-l-lg"
+            />
+
+            <!-- Text & button area -->
+            <div class="p-4 flex flex-col justify-between w-full">
+                <div>
+                    <h5 class="text-2xl font-bold mb-2">
+                        {{ $tip->title }}
+                    </h5>
+                    
+                    <!-- Limit paragraph height, hide overflow -->
+                    <p class="custom-color-desc overflow-hidden h-24">
+                        {{ $tip->content }}
+                    </p>
+                </div>
+
+                <!-- Button at the bottom-right -->
+                <div class="flex justify-end mt-2">
+                    <a 
+                        href="{{ route('tips.show', $tip->id) }}"
+                        class="btn btn-success"
+                    >
+                        Read More
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    @endforeach
+@endforeach
+
+
     </div>
-    
 </x-app-layout>

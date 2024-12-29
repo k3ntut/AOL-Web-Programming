@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/AboutUs', function () {
         return view('AboutUs');
     })->name('aboutus');
-    
+    Route::get('/tips/{id}', [TipsAndResourcesController::class, 'show'])->name('tips.show');
 });
 
 require __DIR__.'/auth.php';
