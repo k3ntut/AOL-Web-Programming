@@ -26,7 +26,6 @@
         .border-custom-color{
             border-color: #312E29;
             background-color: #EDEBDF;
-
         }
         .back-color{
             background-color: #EDEBDF;
@@ -43,8 +42,7 @@
         }
     </style>    
 
-    <!-- Flex container to center content -->
-    <div class="d-flex justify-content-around items-center w-full h-full pb-20"> <!-- Full height and horizontal center -->
+    <div class="d-flex justify-content-around items-center w-full h-full pb-20">
         <div class="w-1/2 flex flex-col items-center justify-center">
 
             <div class="card rounded-xl border-4 border-custom-color" style="width: 16rem;">

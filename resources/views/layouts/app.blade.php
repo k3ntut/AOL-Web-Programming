@@ -39,6 +39,17 @@
                 justify-content: center;
                 flex-grow: 1; 
             }
+            .judul{
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 40px;
+            font-size: 38px;
+        }
+            .anggota{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
         </style>
     </head>
     <body class="font-sans antialiased">
@@ -64,4 +75,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
+    
+    </div>
 </html>

@@ -24,6 +24,7 @@ Route::middleware('auth')->group(function () {
         return view('AboutUs');
     })->name('aboutus');
     Route::get('/tips/{id}', [TipsAndResourcesController::class, 'show'])->name('tips.show');
+    Route::post('/tips', [TipsAndResourcesController::class, 'store'])->name('tips.store');
 });
 
 require __DIR__.'/auth.php';

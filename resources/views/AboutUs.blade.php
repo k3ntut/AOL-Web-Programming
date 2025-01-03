@@ -81,7 +81,7 @@
     <div class="container-fluid jumbotron">
         <p class="text-center text hed">About Us</p>
     </div>
-    <div class="container-fluid isi m-28 mt-20 pb-12">
+    <div class="container-fluid isi m-28 mt-20">
         <div class="container head1 w-full">
             <div class="container flex align-center w-1/4">
                 <div class="">

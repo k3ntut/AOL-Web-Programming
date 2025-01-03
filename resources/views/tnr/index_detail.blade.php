@@ -24,10 +24,15 @@
         .custom-color-desc{
             color: #68717A;
         }
-        .custom-font{
+        .custom-font-withshadow{
             font-family: Inter;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
+        .custom-font{
+            font-family: Inter;
+            /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+        }
         html, body {
     /* Allow scrolling but hide scrollbar */
     overflow-y: scroll;
@@ -37,6 +42,10 @@
 
     /* For IE/Edge 10+ */
     -ms-overflow-style: none;
+}
+
+.heightonly{
+  height: 480px;
 }
 
 /* For Chrome, Safari, and Opera */
@@ -50,12 +59,12 @@ body::-webkit-scrollbar {
   <img 
     src="{{ asset($tip->image) }}" 
     alt="Your Image"
-    class="w-full h-auto"
+    class="w-full heightonly"
   />
 
   <!-- Title in the center of the image -->
   <div class="absolute inset-0 flex items-center justify-center">
-    <h1 class="text-white text-3xl md:text-5xl font-bold text-center custom-font">
+    <h1 class="text-white text-3xl md:text-5xl font-bold text-center custom-font-withshadow">
       {{ $tip->title }}
     </h1>
   </div>
