@@ -6,27 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->date('date');
+            $table->enum('habit', ['walk', 'bike', 'vehicle']);
+            $table->integer('distance_perlog');
             $table->timestamps();
-            $table->enum('habit', ['walk', 'bike', 'vehicle']); // Foreign key column
-            $table->foreign('habit')->references('types')->on('habits')->onDelete('cascade'); // Foreign key constraint        
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign(['user_id', 'habit'])->references(['user_id', 'types'])->on('habits')->onDelete('cascade');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('logs');
     }
 };

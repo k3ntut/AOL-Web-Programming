@@ -88,7 +88,7 @@
         </div>
     </x-slot>
 
-    <div>
+    <div class="w-full">
         @foreach ($tipsandresources as $tip)
         <div class="w-full flex items-center justify-center custom-font mb-4">
             <!-- Fixed card height & width -->

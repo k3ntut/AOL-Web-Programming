@@ -49,22 +49,22 @@
 
                 <div class="">
                     <div class="flex justify-center items-center h-16 addlog-bgcolor addlog-font-color text-4xl font-semibold">Add Log</div>
-                    <form action="">
-
+                    <form action="{{ route('log.store') }}" method="POST">
+                        @csrf
                         <div class="form-group pt-3 pb-3 me-4 ms-4">
                             <label for="inputState" class="back-color mb-1">Mode Of Transport</label>
-                            <select id="inputState" class="form-control rounded-md border-1 border-slate-400 text-slate-400">
+                            <select id="inputState" class="form-control rounded-md border-1 border-slate-400 text-slate-400" name="mode_of_transport">
                                 <option selected>Choose Type</option>
-                                <option>Walk</option>
-                                <option>Bike</option>
-                                <option>Vehicle</option>
+                                <option value="walk">Walk</option>
+                                <option value="bike">Motor Bike</option>
+                                <option value="vehicle">Vehicle</option>
                             </select>
                         </div>
                         
                         <div class="form-group pb-3 me-4 ps-4 ">
                             <label for="inputZip" class="back-color mb-1">Distance</label>
                             <div class="text-slate-400">
-                                <input type="number" class="form-control rounded-md border-1 border-slate-400 colored-placeholder" placeholder="Enter Distance">
+                                <input type="number" name="distance" class="form-control rounded-md border-1 border-slate-400 colored-placeholder" placeholder="Enter Distance">
                             </div>
                         </div>
                         
@@ -82,7 +82,7 @@
 
                 <ul class="list-disc small-title p-3 w-3/4">
                     <li><span class="small-bold">Walk:</span> Walking is a carbon-neutral way to get around! By choosing to walk, you're reducing your carbon emissions and improving your health.</li>
-                    <li><span class="small-bold">Bike:</span> Biking is a low-carbon mode of transportation. By opting to bike, you're contributing to cleaner air and a healthier planet.</li>
+                    <li><span class="small-bold">Motor Bike:</span> Motor Bike are a fuel-efficient mode of transportation. By choosing to ride a motorcycle, you're reducing fuel consumption and contributing to a more sustainable environment.</li>
                     <li><span class="small-bold">Vehicle:</span> Tracking your vehicle usage helps you understand your carbon footprint. This awareness can motivate you to make more eco-friendly choices.</li>
                 </ul>
             </div>

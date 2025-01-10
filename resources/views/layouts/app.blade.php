@@ -6,17 +6,21 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+
         <!-- Bootstrap CSS from CDN -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <!-- Fonts -->
+        <!-- Bunny Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet">
+        <!-- Font Awesome (fixed the closing tag) -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <!-- Scripts -->
+        <!-- Vite -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <!-- Bootstrap JS bundle (includes Popper) -->
 
+        <!-- Custom Styles -->
         <style>
             html, body {
                 height: 100%;
@@ -40,11 +44,11 @@
                 flex-grow: 1; 
             }
             .judul{
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 40px;
-            font-size: 38px;
-        }
+                text-align: center;
+                font-weight: 700;
+                margin-bottom: 40px;
+                font-size: 38px;
+            }
             .anggota{
                 display: flex;
                 flex-direction: row;
@@ -71,10 +75,8 @@
                 {{ $slot }}
             </main>
         </div>
-        <!-- Bootstrap JS bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+        <!-- Bootstrap JS bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
-    
-    </div>
 </html>
