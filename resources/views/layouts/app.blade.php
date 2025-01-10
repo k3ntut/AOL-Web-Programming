@@ -16,6 +16,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet">
         <!-- Font Awesome (fixed the closing tag) -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
         <!-- Vite -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
