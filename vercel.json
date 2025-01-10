@@ -30,15 +30,6 @@
         "SESSION_DRIVER": "cookie",
         "APP_KEY": "base64:iQV6gme1/u/m/298VMwAhMKs1KqNbi/PibqDdIZ8stQ="
     },
-    "build": {
-        "env": {
-            "APP_ENV": "production"
-        },
-        "commands": [
-            "composer install --ignore-platform-reqs --no-dev --optimize-autoloader",
-            "npm install",
-            "npm run build"
-        ]
-    },
+    "buildCommand": "composer install --ignore-platform-reqs --no-dev --optimize-autoloader && npm install && npm run build",
     "outputDirectory": "public"
 }
