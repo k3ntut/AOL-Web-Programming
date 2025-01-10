@@ -9,6 +9,7 @@
         {
             "src": "/img/(.*)",
             "dest": "/public/img/"
+            
         },
         {
             "src": "/(.*)",
