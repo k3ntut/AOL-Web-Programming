@@ -8,4 +8,8 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: true,
+    },
+    envPrefix: 'VITE_',  // Ensure it recognizes VITE_ variables from .env
 });
