@@ -18,7 +18,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://example-atomik.vercel.app/",
+        "APP_URL": "https://aol-web-programming.vercel.app/",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -27,7 +27,9 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+        "APP_KEY": "base64:iQV6gme1/u/m/298VMwAhMKs1KqNbi/PibqDdIZ8stQ="
+
     },
     "outputDirectory": "public"
 }
